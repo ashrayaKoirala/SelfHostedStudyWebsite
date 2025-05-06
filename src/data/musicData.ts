@@ -25,9 +25,9 @@ export const defaultMusicTracks: CustomMusicStream[] = [
   },
    { // Added Jazz Back
     id: 'default-jazzhop-1',
-    name: 'Jazz Hop Cafe 🎷',
+    name: 'Jazz Hop Cafe Rainy🎷',
     // Example (Search "jazz hop radio study"):
-    url: 'https://www.youtube.com/watch?v=DD9xhF0RXSY'
+    url: 'https://www.youtube.com/watch?v=NJuSStkIZBg'
   },
   {
     id: 'default-ambient-1',

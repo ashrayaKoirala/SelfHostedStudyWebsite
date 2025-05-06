@@ -16,7 +16,7 @@ export default defineConfig({
         description: 'Your Samurai companion for focused studying and task management.',
         theme_color: '#B91C1C', // Example: Red-800 (Tailwind color)
         background_color: '#111827', // Example: Gray-900 (Tailwind color)
-        display: 'standalone', // Makes it feel more like a native app
+        display: 'fullscreen', // Makes it feel more like a native app
         scope: '/',
         start_url: '/',
         icons: [
