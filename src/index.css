@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%; /* Make sure root elements take full height */
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Poppins', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+
+  /* Japanese-themed color variables */
+  --color-sakura-light: #ffd6e0;
+  --color-sakura: #ff9cad;
+  --color-sakura-dark: #e5697d;
+  --color-ink: #2d3748;
+  --color-rice: #f7f7f7;
+  --color-parchment: #f8f0e3;
+  --color-bamboo-light: #d4edda;
+  --color-bamboo: #92d36e;
+  --color-indigo: #29347b;
+  --color-gold: #d4af37;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Japanese style elements */
+.font-japanese {
+  font-family: 'Noto Sans JP', 'Zen Maru Gothic', sans-serif;
+}
+
+/* General Scrollbar Base */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* --- Theme Specific Scrollbars --- */
+/* (Keep existing theme scrollbar styles) */
+body.theme-samurai ::-webkit-scrollbar-thumb {
+  background-color: rgba(229, 105, 125, 0.6);
+  border-radius: 10px;
+  border: 2px solid rgba(254, 242, 242, 0.85);
+}
+body.theme-samurai ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(229, 105, 125, 0.9);
+}
+body.theme-ninja ::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 90, 213, 0.6);
+  border-radius: 10px;
+  border: 2px solid rgba(45, 55, 72, 0.85);
+}
+body.theme-ninja ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(128, 90, 213, 0.9);
+}
+body.theme-shrine ::-webkit-scrollbar-thumb {
+  background-color: rgba(221, 107, 32, 0.6);
+  border-radius: 10px;
+  border: 2px solid rgba(254, 235, 200, 0.85);
+}
+body.theme-shrine ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(221, 107, 32, 0.9);
+}
+body.theme-default ::-webkit-scrollbar-thumb,
+body.theme-light ::-webkit-scrollbar-thumb {
+  background-color: rgba(59, 130, 246, 0.5);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+body.theme-default ::-webkit-scrollbar-thumb:hover,
+body.theme-light ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(59, 130, 246, 0.8);
+}
+body.theme-dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.5);
+  border-radius: 10px;
+  border: 2px solid rgba(31, 41, 55, 0.85);
+}
+body.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.8);
+}
+
+
+/* Container for the entire app */
+body {
+  min-width: 320px;
+  min-height: 100vh; /* Keep min-height as well */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  color: var(--color-ink); /* Default text color */
+  /* SET A DEFAULT BACKGROUND COLOR - Match your default theme */
+  /* Example using Tailwind's gray-900 */
+  background-color: #111827;
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* REMOVED text-stroke-black-subtle utility */
+
+/* Range input slider styles */
+input[type=range].timer-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type=range].timer-slider:hover {
+  opacity: 1;
+}
+
+input[type=range].timer-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+input[type=range].timer-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}

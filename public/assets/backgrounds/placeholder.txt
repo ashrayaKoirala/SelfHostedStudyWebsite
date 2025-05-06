@@ -1,0 +1,7 @@
+This is a placeholder file. Please add your background images here.
+
+Required images:
+- waifu-background.jpg - A serene Japanese landscape with cherry blossoms
+- sakura-petal.png - Individual cherry blossom petal
+- lantern.png - Traditional Japanese paper lantern
+- bird.png - Silhouette of a Japanese crane

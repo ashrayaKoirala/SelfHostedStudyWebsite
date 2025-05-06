@@ -1,0 +1,23 @@
+# netlify.toml
+
+# This rule ensures that all paths serve your SPA's entry point.
+# This is the same as your _redirects file. It's good practice to have it here
+# as well, or you can choose to manage all redirects/rewrites in this file.
+# If you have a _redirects file in public/, Netlify processes _redirects first.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# This rule explicitly sets the Content-Type for your JavaScript assets.
+# This is the most important part for fixing the "octet-stream" MIME type error.
+[[headers]]
+  for = "/assets/*.js"  # This targets all .js files in your build's /assets/ directory
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+
+# You might also want one for CSS, though it's less commonly an issue:
+# [[headers]]
+#   for = "/assets/*.css"
+#   [headers.values]
+#     Content-Type = "text/css; charset=utf-8"
